@@ -65,7 +65,7 @@ namespace ConsoleApp1
                 {
                     for (int i = 0; i <= arg_index; i++)
                     {
-                        if (arg == args[i] && arg !=args[0])
+                        if (arg != args[i])
                         {
                             Console.WriteLine($"You have entered duplicate arguments. Index of duplicate argument {arg}. Try again...");
                             return;
