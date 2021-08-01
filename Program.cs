@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 using System.Security.Cryptography;
 
@@ -79,6 +79,7 @@ namespace ConsoleApp1
 
             }
 
+            
             if (args.Length % 2 == 0)
             {
                 Console.WriteLine("You have entered an even number of arguments.");
