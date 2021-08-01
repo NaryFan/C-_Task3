@@ -59,25 +59,24 @@ namespace ConsoleApp1
         }
         static void Main(string[] args)
         { 
-            int arg_index = 0;
+            if (args.Length < 3)
+            {
+                Console.WriteLine($"You have not entered enough parameters: {args.Length}.");
+                return;
+            }
             
-                foreach (string arg in args)
+            foreach (string arg in args)
+            {
+                for (int i = Array.IndexOf(args, arg) + 1; i <= args.Length - 1; i++)
                 {
-                    for (int i = 0; i <= arg_index; i++)
+                    if (arg == args[i])
                     {
-                        if (arg != args[i])
-                        {
-                            Console.WriteLine($"You have entered duplicate arguments. Index of duplicate argument {arg}. Try again...");
-                            return;
-                        }
-
+                        Console.WriteLine($"You have entered duplicate arguments. Index of duplicate argument {arg}. Try again...");
+                        return;
                     }
 
                 }
-            if (args.Length < 3)
-            {
-                Console.WriteLine("You have entered less than three arguments.");
-                return;
+
             }
 
             if (args.Length % 2 == 0)
